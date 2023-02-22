@@ -1,4 +1,5 @@
 import React from "react";
+import { GlobalStyle, ThemeProvider } from "@amsterdam/asc-ui";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
@@ -9,11 +10,12 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <ThemeProvider>
+    <GlobalStyle />
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
