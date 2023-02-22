@@ -2,11 +2,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 //import logo from "./logo.svg";
 import "./App.scss";
-
+//import { NavigatieView } from "./50-views/navigatie/NavigatieView";
 import { HomeView } from "./views/homeview/HomeView";
 import { Navigatie } from "./components/navigatie/Navigatie";
-//import Footer1 from "./components/footer/Footer";
-//import { CharacterDetail } from "./views/characterdetail/CharacterDetail";
+import { CharacterDetail } from "./views/characterdetail/CharacterDetail";
 
 function App() {
   return (
@@ -14,6 +13,21 @@ function App() {
       <Navigatie />
       <Routes>
         <Route element={<HomeView />} path="/" />
+        <Route
+          element={
+            <CharacterDetail
+              id={""}
+              name={""}
+              status={""}
+              species={""}
+              type={""}
+              gender={""}
+              image={""}
+              episode={[]}
+            />
+          }
+          path="/characters/:id"
+        />
       </Routes>
     </div>
   );
