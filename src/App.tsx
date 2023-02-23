@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import { HomeView } from "./views/homeview/HomeView";
 import { Navigatie } from "./components/navigatie/Navigatie";
-import { CharacterDetail } from "./views/characterdetail/CharacterDetail";
+import { CharacterDetail } from "./views/characterdetail/CharacterDetailView";
 import Footer1 from "./components/footer/Footer";
 
 function App() {

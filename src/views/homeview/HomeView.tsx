@@ -30,10 +30,12 @@ export const HomeView = () => {
   }, [pageNumber]);
   return (
     <>
-      <PaginationButtons
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
-      />
+      <div className="main">
+        <PaginationButtons
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+        />
+      </div>
       <PageWrapper isLoading={loading}>
         {character.map((perCharacter: JSX.IntrinsicAttributes & ICharacter) => (
           <CharacterComponent {...perCharacter} key={perCharacter.id} />
