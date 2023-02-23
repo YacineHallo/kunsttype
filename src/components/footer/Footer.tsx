@@ -11,11 +11,12 @@ import {
   FooterTop
 } from "@amsterdam/asc-ui";
 
+import "../../App.scss";
 import React from "react";
 
 const Footer1 = () => (
   <Footer>
-    <FooterTop>
+    <FooterTop className="footer">
       <Row>
         <Column
           wrap
