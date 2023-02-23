@@ -4,6 +4,7 @@ import { ICharacter } from "../../types/IndexTypes";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { PageWrapper } from "../../components/pagewrapper/PageWrapper";
+import "../../App.scss";
 
 export const CharacterDetail = (results: ICharacter) => {
   let { id } = useParams();
@@ -31,20 +32,27 @@ export const CharacterDetail = (results: ICharacter) => {
     getCharacter();
   }, []);
   return (
-    <>
-      <PageWrapper isLoading={loading}>
+    <PageWrapper isLoading={loading}>
+      <div className="main characterdetail-postion">
         <h1>Hallo {id}</h1>
         {character && (
-          <ul>
-            <li>{character.image}</li>
-            <li>{character.name}</li>
-            <li>{character.status}</li>
-            <li>{character.species}</li>
-            <li>{character.gender}</li>
-          </ul>
+          <>
+            <img
+              src={character.image}
+              alt={`drawing of ${character.name}`}
+              className="character__img"
+              width="250"
+              height="200"
+            />
+            <ul>
+              <li>{character.name}</li>
+              <li>{character.status}</li>
+              <li>{character.species}</li>
+              <li>{character.gender}</li>
+            </ul>
+          </>
         )}
-      </PageWrapper>
-      ;
-    </>
+      </div>
+    </PageWrapper>
   );
 };

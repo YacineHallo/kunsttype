@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 //   return (
 //     //<div className="character-component">
 //     <div className="container__main">
-//       <article className="character-detail article1">
+//       <article className="character-component article1">
 //         <h3 className="character-detail__header">{name}</h3>
 //         <figure className="character-detail__figure">
 //           <img src={image} alt="" className="character-detail__figure__img" />
@@ -59,15 +59,15 @@ const CharacterComponent = (results: ICharacter) => {
           height="200"
         />
 
-        <article className="character-detail">
+        <article className="character-component">
           <ul>
-            <li className="character-detail__eigenschap hover">
+            <li className="character-component__eigenschap hover">
               Species: {species}
             </li>
-            <li className="character-detail__eigenschap hover">
+            <li className="character-component__eigenschap hover">
               Status: {status}
             </li>
-            <li className="character-detail__eigenschap hover">
+            <li className="character-component__eigenschap hover">
               Gender: {gender}
             </li>
           </ul>
